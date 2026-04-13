@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "stock-analyzer-ai-mcp"
+version = "0.1.0"
+description = "Analyze stock price data with technical indicators including moving averages, RSI, and simple trend signals."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0.0",
+    "pydantic>=2.0",
+]
+
+[project.scripts]
+stock_analyzer_ai_mcp = "stock_analyzer_ai_mcp.server:main"
