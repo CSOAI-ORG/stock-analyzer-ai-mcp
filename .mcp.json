@@ -1,20 +1,6 @@
 {
   "name": "stock-analyzer-ai-mcp",
-  "description": "MEOK AI Labs \u2014 Stock Analyzer tools for AI agents and LLMs",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/stock-analyzer-ai-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
-  "tools": [
-    "analyze_stock"
-  ],
-  "categories": [
-    "Finance",
-    "Investment"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+  "description": "Analyze stock price data with technical indicators including moving averages, RSI, and simple trend signals.",
+  "version": "1.0.0",
+  "tools": []
 }
