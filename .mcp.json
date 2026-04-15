@@ -1,14 +1,103 @@
 {
   "name": "stock-analyzer-ai-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 MEOK AI Labs MCP Server",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Analyze stocks with financial ratios, comparisons, and sector performance data.",
   "version": "1.0.0",
   "tools": [
     {
       "name": "analyze_stock",
-      "description": "Analyze a stock ticker",
+      "description": "Analyze a stock with key metrics and generate a buy/hold/sell recommendation.",
       "parameters": {
         "type": "object",
-        "properties": {},
+        "properties": {
+          "ticker": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "pe": {
+            "type": "number"
+          },
+          "eps": {
+            "type": "number"
+          },
+          "dividend_yield": {
+            "type": "number"
+          },
+          "market_cap_b": {
+            "type": "number"
+          },
+          "revenue_growth": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "ticker",
+          "price"
+        ]
+      }
+    },
+    {
+      "name": "calculate_ratios",
+      "description": "Calculate key financial ratios: P/E, P/B, P/S, dividend yield, debt-to-equity, and more.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "price": {
+            "type": "number"
+          },
+          "eps": {
+            "type": "number"
+          },
+          "book_value": {
+            "type": "number"
+          },
+          "revenue_per_share": {
+            "type": "number"
+          },
+          "dividend": {
+            "type": "number"
+          },
+          "shares_outstanding_m": {
+            "type": "number"
+          },
+          "total_debt_b": {
+            "type": "number"
+          },
+          "total_equity_b": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "price"
+        ]
+      }
+    },
+    {
+      "name": "compare_stocks",
+      "description": "Compare multiple stocks side by side. Each item needs 'ticker', 'price', 'pe', and optionally 'growth', 'dividend_yield'.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "stocks": {
+            "type": "array"
+          }
+        },
+        "required": [
+          "stocks"
+        ]
+      }
+    },
+    {
+      "name": "get_sector_performance",
+      "description": "Get sector performance data and representative tickers. Leave sector empty for all sectors.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "sector": {
+            "type": "string"
+          }
+        },
         "required": []
       }
     }

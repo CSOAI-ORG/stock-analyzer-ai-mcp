@@ -1,7 +1,71 @@
 name: stock-analyzer-ai-mcp
-description: MEOK AI Labs MCP Server
+description: Analyze stocks with financial ratios, comparisons, and sector performance
+  data.
 version: 1.0.0
 tools:
 - name: analyze_stock
-  description: Analyze a stock ticker
-  parameters: []
+  description: Analyze a stock with key metrics and generate a buy/hold/sell recommendation.
+  parameters:
+  - name: ticker
+    type: string
+    required: true
+  - name: price
+    type: number
+    required: true
+  - name: pe
+    type: number
+    required: false
+  - name: eps
+    type: number
+    required: false
+  - name: dividend_yield
+    type: number
+    required: false
+  - name: market_cap_b
+    type: number
+    required: false
+  - name: revenue_growth
+    type: number
+    required: false
+- name: calculate_ratios
+  description: 'Calculate key financial ratios: P/E, P/B, P/S, dividend yield, debt-to-equity,
+    and more.'
+  parameters:
+  - name: price
+    type: number
+    required: true
+  - name: eps
+    type: number
+    required: false
+  - name: book_value
+    type: number
+    required: false
+  - name: revenue_per_share
+    type: number
+    required: false
+  - name: dividend
+    type: number
+    required: false
+  - name: shares_outstanding_m
+    type: number
+    required: false
+  - name: total_debt_b
+    type: number
+    required: false
+  - name: total_equity_b
+    type: number
+    required: false
+- name: compare_stocks
+  description: Compare multiple stocks side by side. Each item needs 'ticker', 'price',
+    'pe', and optionally 'growth', 'dividend_yield'.
+  parameters:
+  - name: stocks
+    type: array
+    required: true
+- name: get_sector_performance
+  description: Get sector performance data and representative tickers. Leave sector
+    empty for all sectors.
+  parameters:
+  - name: sector
+    type: string
+    required: false
