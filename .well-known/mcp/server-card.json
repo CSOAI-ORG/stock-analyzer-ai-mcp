@@ -1,0 +1,53 @@
+{
+  "name": "stock-analyzer-ai",
+  "description": "Analyze stocks with financial ratios, comparisons, and sector performance data.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/stock-analyzer-ai-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "analyze_stock",
+      "description": "Analyze a stock with key metrics and generate a buy/hold/sell recommendation."
+    },
+    {
+      "name": "calculate_ratios",
+      "description": "Calculate key financial ratios: P/E, P/B, P/S, dividend yield, debt-to-equity, and more."
+    },
+    {
+      "name": "compare_stocks",
+      "description": "Compare multiple stocks side by side. Each item needs 'ticker', 'price', 'pe', and optionally 'growth', 'dividend_yield'."
+    },
+    {
+      "name": "get_sector_performance",
+      "description": "Get sector performance data and representative tickers. Leave sector empty for all sectors."
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning",
+    "Data & Analytics"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
