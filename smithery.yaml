@@ -1,6 +1,6 @@
 name: stock-analyzer-ai-mcp
-description: Analyze stocks with financial ratios, comparisons, and sector performance
-  data.
+description: AI-powered stock analyzer ai MCP server for agents. Supports analyze
+  stock, calculate ratios, compare stocks. By MEOK AI Labs.
 version: 1.0.0
 tools:
 - name: analyze_stock
