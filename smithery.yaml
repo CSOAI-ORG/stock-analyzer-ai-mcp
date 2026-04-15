@@ -1,4 +1,7 @@
 name: stock-analyzer-ai-mcp
 description: MEOK AI Labs MCP Server
 version: 1.0.0
-tools: []
+tools:
+- name: analyze_stock
+  description: Analyze a stock ticker
+  parameters: []
