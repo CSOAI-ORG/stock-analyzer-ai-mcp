@@ -1,6 +1,6 @@
 {
   "name": "stock-analyzer-ai-mcp",
-  "description": "Analyze stock price data with technical indicators including moving averages, RSI, and simple trend signals.",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Sovereign AI tools for everyone.",
   "version": "1.0.0",
   "tools": []
 }
