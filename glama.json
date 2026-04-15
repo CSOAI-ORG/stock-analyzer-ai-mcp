@@ -1,0 +1,10 @@
+{
+  "name": "stock-analyzer-ai-mcp",
+  "description": "MEOK AI Labs \u2014 stock-analyzer-ai-mcp",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/stock-analyzer-ai-mcp",
+  "license": "MIT",
+  "runtime": "python",
+  "entryPoint": "mcp-wrapper.py"
+}
