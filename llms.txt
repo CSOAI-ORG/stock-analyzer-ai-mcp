@@ -1,0 +1,33 @@
+# stock-analyzer-ai-mcp
+# > By [MEOK AI Labs](https://meok.ai) — Analyze stocks with financial ratios, comparisons, and sector performance data.
+
+## Install
+```bash
+pip install stock-analyzer-ai-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
+
+## Tools
+
+### `analyze_stock`
+Analyze a stock with key metrics and generate a buy/hold/sell recommendation.
+
+### `calculate_ratios`
+Calculate key financial ratios: P/E, P/B, P/S, dividend yield, debt-to-equity, and more.
+
+### `compare_stocks`
+Compare multiple stocks side by side. Each item needs 'ticker', 'price', 'pe', and optionally 'growth', 'dividend_yield'.
+
+### `get_sector_performance`
+Get sector performance data and representative tickers. Leave sector empty for all sectors.
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

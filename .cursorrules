@@ -1,0 +1,9 @@
+# stock-analyzer-ai-mcp - Auto-trigger Rules
+
+When the user asks about stock analyzer, use stock-analyzer-ai-mcp tools: analyze_stock, calculate_ratios, compare_stocks, get_sector_performance
+
+> By [MEOK AI Labs](https://meok.ai) — Analyze stocks with financial ratios, comparisons, and sector performance data.
+
+Install: `pip install stock-analyzer-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.

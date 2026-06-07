@@ -1,0 +1,25 @@
+{
+  "name": "stock-analyzer-ai-mcp",
+  "title": "Stock Analyzer Ai Mcp",
+  "description": "AI-powered stock analyzer ai MCP server for agents. Supports analyze stock, calculate ratios, compare stocks. By MEOK AI Labs.",
+  "version": "1.0.5",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "analyze_stock"
+    },
+    {
+      "name": "calculate_ratios"
+    },
+    {
+      "name": "compare_stocks"
+    },
+    {
+      "name": "get_sector_performance"
+    }
+  ]
+}

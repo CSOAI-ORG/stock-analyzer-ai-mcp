@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""MEOK AI Labs — stock-analyzer-ai-mcp MCP Server. Analyze stocks with basic metrics and trend summaries."""
+"""
+MEOK AI Labs — stock-analyzer-ai-mcp MCP Server. Analyze stocks with basic metrics and trend summaries."""
 
 import json
 from datetime import datetime, timezone
@@ -7,7 +8,6 @@ from collections import defaultdict
 
 from mcp.server.fastmcp import FastMCP
 import sys, os
-sys.path.insert(0, os.path.expanduser("~/clawd/meok-labs-engine/shared"))
 from auth_middleware import check_access
 
 FREE_DAILY_LIMIT = 15
@@ -36,7 +36,7 @@ def analyze_stock(ticker: str, price: float, pe: float = 0, eps: float = 0, divi
     """Analyze a stock with key metrics and generate a buy/hold/sell recommendation."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     # Determine PE if not provided
@@ -84,7 +84,7 @@ def calculate_ratios(price: float, eps: float = 0, book_value: float = 0, revenu
     """Calculate key financial ratios: P/E, P/B, P/S, dividend yield, debt-to-equity, and more."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     ratios = {}
@@ -119,7 +119,7 @@ def compare_stocks(stocks: list[dict], api_key: str = "") -> str:
     """Compare multiple stocks side by side. Each item needs 'ticker', 'price', 'pe', and optionally 'growth', 'dividend_yield'."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     comparison = []
@@ -164,7 +164,7 @@ def get_sector_performance(sector: str = "", api_key: str = "") -> str:
     """Get sector performance data and representative tickers. Leave sector empty for all sectors."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     if sector and sector.lower() in SECTOR_DATA:
@@ -195,5 +195,8 @@ def get_sector_performance(sector: str = "", api_key: str = "") -> str:
     }, indent=2)
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()
