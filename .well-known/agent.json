@@ -1,0 +1,59 @@
+{
+  "name": "stock-analyzer-ai-mcp",
+  "description": "AI-powered stock analyzer ai MCP server for agents. Supports analyze stock, calculate ratios",
+  "url": "https://proofof.ai/scorecard/stock-analyzer-ai-mcp.html",
+  "version": "1.0.5",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "analyze_stock",
+      "name": "Analyze Stock",
+      "description": "analyze_stock via stock-analyzer-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "calculate_ratios",
+      "name": "Calculate Ratios",
+      "description": "calculate_ratios via stock-analyzer-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "compare_stocks",
+      "name": "Compare Stocks",
+      "description": "compare_stocks via stock-analyzer-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "get_sector_performance",
+      "name": "Get Sector Performance",
+      "description": "get_sector_performance via stock-analyzer-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}

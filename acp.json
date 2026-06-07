@@ -1,0 +1,22 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "stock-analyzer-ai-mcp",
+    "description": "AI-powered stock analyzer ai MCP server for agents. Supports analyze stock, calculate ratios",
+    "version": "1.0.5",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "stock-analyzer-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "analyze_stock",
+      "calculate_ratios",
+      "compare_stocks",
+      "get_sector_performance"
+    ]
+  }
+}
